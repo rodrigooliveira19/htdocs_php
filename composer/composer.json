@@ -1,0 +1,15 @@
+{
+    "name": "oliveirarodrigo/composer",
+    "description": "projeto",
+    "type": "project",
+    "authors": [
+        {
+            "name": "rodrigooliveira19",
+            "email": "oliveirarodrigo19@yahoo.com.br"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    	"monolog/monolog":"1.0.*"
+    }
+}

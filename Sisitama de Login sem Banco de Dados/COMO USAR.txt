@@ -1,0 +1,26 @@
+Primeiro faça o upload dos arquivos e pastas...
+A pagina INDEX é por sua conta. ( Fomarto: index.php ).
+Todas as paginas protegidas deve colocar o codigo no começo:
+
+include('protegido.php');
+
+Exemplo:
+
+<?php
+include('protegido.php');
+echo "Seja bem vindo a pagina PROTEGIDA";
+?>
+
+Para saber o nome do usuario apenas use a variavel $nome em cada pagina protegida.
+
+Exemplo:
+
+<?php
+include('protegido.php');
+echo "Olá $nome, Seja bem vindo a pagina PROTEGIDA";
+?>
+
+
+
+
+Ajuda? Me envie um e-mail ou me adicione no msn: jardson_33@hotmail.com.br ( Possui mesmo .com.br! )
