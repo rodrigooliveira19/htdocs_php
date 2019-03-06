@@ -19,7 +19,7 @@ echo "<br/>$dia";
 
 echo "<br>"; 
 
-#retorna a data atual. 
+#retorna a data atual do servidor. 
 $time = strtotime("now");
 
 #soma um dia na data atual. 

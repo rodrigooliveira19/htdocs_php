@@ -5,7 +5,7 @@
 #portuguese é do windows. 
 #LC_ALL muda toda a configuração para o indicado. 
 
-setlocale(LC_ALL, "pt_BR","pt_BR.utf-8","portuguese"); 
+setlocale(LC_ALL,"pt_BR","pt_BR.utf-8","portuguese"); 
 
 
 #strftime é semelhante a date.Consegue pegar a data no padrão de linguagem definido. Ver documentação. 
@@ -14,7 +14,13 @@ echo ucwords(strftime("%A , %d de  %B de %G"));
 
 echo "<br/>"; 
 
-#date não converte para o padrão informado. 
-echo date("l d/m/y");
 
- ?>
+#date não converte para o padrão informado. 
+echo date("d/m/y");
+
+echo "<br/>";
+
+$date = strtotime("now"); 
+echo date("d/m/y",$date); 
+
+?>
