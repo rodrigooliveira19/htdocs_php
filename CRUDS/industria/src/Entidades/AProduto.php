@@ -6,7 +6,7 @@
 
 	abstract class AProduto{
 
-		private $cod; 
+		private $codigo; 
 		private $nome; 
 		private $formulaQuimica; 
 		private $numeroToxico; 
@@ -21,12 +21,12 @@
 			$this->estoque = new Estoque(); 
 		}
 
-		public function setCod($cod){
-			$this->cod = $cod; 
+		public function setCodigo($codigo){
+			$this->codigo = $codigo; 
 		}
 
-		public function getCod(){
-			return $this->cod; 
+		public function getCodigo(){
+			return $this->codigo; 
 		}
 
 		public function setNome($nome){
