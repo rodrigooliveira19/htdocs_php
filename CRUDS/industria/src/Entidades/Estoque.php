@@ -4,24 +4,33 @@ namespace Entidades;
 	class Estoque
 	{
 
-		private $cod; 
+		private $codigo; 
 		private $valorMinimo; 
 		private $valorAtual; 
 		private $valorMaximo; 
+		private $produtoCodigo; 
 
-		function __construct($valorMinimo=0,$valorAtual=0,$valorMaximo=0)
+		function __construct(int $valorMinimo=0,int $valorAtual=0,int $valorMaximo=0)
 		{
 			$this->valorMinimo = $valorMinimo; 
 			$this->valorAtual = $valorAtual; 
 			$this->valorMaximo = $valorMaximo; 
 		}
 
-		public function setCod($cod){
-			$this->cod = $cod; 
+		public function setCodigo($codigo){
+			$this->codigo = $codigo; 
 		}
 
-		public function getCod(){
-			return $this->$cod; 
+		public function getCodigo(){
+			return $this->codigo; 
+		}
+
+		public function setProdutoCodigo($produtoCodigo){
+			$this->produtoCodigo = $produtoCodigo; 
+		}
+
+		public function getProdutoCodigo(){
+			return $this->produtoCodigo; 
 		}
 
 		public function setValorMinimo($valorMinimo)
@@ -65,7 +74,8 @@ namespace Entidades;
 
 		public function __toString(){
 
-			return json_encode(array("cod"=>$this->cod, 
+			return json_encode(array("codigo"=>$this->codigo, 
+				                    "produtoCodigo"=>$this->produtoCodigo, 
 			    					"valorMinimo"=>$this->valorMinimo, 
 									"valorAtual"=>$this->valorAtual, 
 								    "valorMaximo"=>$this->valorMaximo)); 

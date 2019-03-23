@@ -16,7 +16,7 @@ class ConexaoDB
 	{
 		if (!isset(self::$instance)) {
 			try {
-				self::$instance = new PDO("mysql:dbname=industria_farmaceutica;host=localhost","root","rodrigoso"); 
+				self::$instance = new PDO("mysql:dbname=industria_farmaceutica;host=localhost;port=3306","root","rodrigoso"); 
 			} catch (Exception $e) {
 				
 			}

@@ -29,7 +29,7 @@ class ProdutoDao
 		$stmt = $this->db->prepare("INSERT INTO produto (produto_id,tipo,nome,formula_quimica,grau_toxico)
 										VALUES (:PRODUTO_ID,:TIPO,:NOME,:FORMULA_QUIMICA,:NUMERO_TOXICO)"); 
 
-		$produto_id = $produto->getCod(); 
+		$produto_id = $produto->getCodigo(); 
 		$produto_tipo = $produto->getTipo();
 		$produto_nome = $produto->getNome();
 		$produto_formulaQuimica = $produto->getFormulaQuimica();
@@ -46,8 +46,10 @@ class ProdutoDao
 		}
 	}
 
-	public function selectProdutoId(int id)
+	/*public function selectProdutoId(int id)
 	{
 
-	}
+	}*/
+
+
 }

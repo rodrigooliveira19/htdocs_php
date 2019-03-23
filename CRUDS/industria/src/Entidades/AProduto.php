@@ -58,8 +58,13 @@
 			return $this->estoque; 
 		}
 
+		public function setEstoque($estoque)
+		{
+			return $this->estoque = $estoque; 
+		}
+
 		public function __toString(){
-			return json_encode(array("cod"=>$this->cod, 
+			return json_encode(array("codigo"=>$this->codigo, 
 		                  "nome"=>$this->nome, 
 		                  "formulaQuimica"=>$this->formulaQuimica, 
 		                  "numeroToxico"=>$this->numeroToxico)); 
