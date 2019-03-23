@@ -8,9 +8,9 @@ namespace Entidades;
 		private $descInsumo= ""; 
 		private $quantidade = 0; 
 
-		function __construct($descInsumo,$quantidade){
+		function __construct($descInsumo,float $quantidade){
 			$this->descInsumo = $descInsumo; 
-			$this->$quantidade = $quantidade; 
+			$this->quantidade = $quantidade; 
 		}
 
 
@@ -19,15 +19,15 @@ namespace Entidades;
 		}
 
 		public function getDescInsumo(){
-			return $this->$descInsumo; 
+			return $this->descInsumo; 
 		}
 
-		public function setQuantidade($quantidade){
+		public function setQuantidade(float $quantidade){
 			$this->quantidade = $quantidade; 
 		}
 
 		public function getQuantidade(){
-			return $this->$quantidade; 
+			return $this->quantidade; 
 		}
 
 

@@ -13,7 +13,7 @@
 
 		private $estoque; 
 
-		function __construct($nome,$formulaQuimica,$numeroToxico)
+		function __construct($nome,$formulaQuimica,int $numeroToxico)
 		{
 			$this->nome = $nome; 
 			$this->formulaQuimica = $formulaQuimica; 
@@ -21,7 +21,7 @@
 			$this->estoque = new Estoque(); 
 		}
 
-		public function setCodigo($codigo){
+		public function setCodigo(int $codigo){
 			$this->codigo = $codigo; 
 		}
 

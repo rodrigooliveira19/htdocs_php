@@ -10,14 +10,14 @@ namespace Entidades;
 		private $valorMaximo; 
 		private $produtoCodigo; 
 
-		function __construct(int $valorMinimo=0,int $valorAtual=0,int $valorMaximo=0)
+		function __construct(float $valorMinimo=0,float $valorAtual=0,float $valorMaximo=0)
 		{
 			$this->valorMinimo = $valorMinimo; 
 			$this->valorAtual = $valorAtual; 
 			$this->valorMaximo = $valorMaximo; 
 		}
 
-		public function setCodigo($codigo){
+		public function setCodigo(int $codigo){
 			$this->codigo = $codigo; 
 		}
 
@@ -25,7 +25,7 @@ namespace Entidades;
 			return $this->codigo; 
 		}
 
-		public function setProdutoCodigo($produtoCodigo){
+		public function setProdutoCodigo(int $produtoCodigo){
 			$this->produtoCodigo = $produtoCodigo; 
 		}
 
@@ -33,7 +33,7 @@ namespace Entidades;
 			return $this->produtoCodigo; 
 		}
 
-		public function setValorMinimo($valorMinimo)
+		public function setValorMinimo(float $valorMinimo)
 		{
 			$this->valorMinimo = $valorMinimo; 
 		}
@@ -43,7 +43,7 @@ namespace Entidades;
 			return $this->valorMinimo; 
 		}
 
-		public function setValorAtual($valorAtual){
+		public function setValorAtual(float $valorAtual){
 			$this->valorAtual = $valorAtual; 
 		}
 
@@ -52,7 +52,7 @@ namespace Entidades;
 			return $this->valorAtual; 
 		}
 
-		public function setValorMaximo($valorMaximo)
+		public function setValorMaximo(float $valorMaximo)
 		{
 			$this->valorMaximo = $valorMaximo; 
 		}
@@ -61,12 +61,12 @@ namespace Entidades;
 			return $this->valorMaximo; 
 		}
 
-		public function addQuantidade($quantidade)
+		public function addQuantidade(float $quantidade)
 		{
 			$this->valorAtual+=$quantidade; 
 		}
 
-		public function subQuantidade($quantidade)
+		public function subQuantidade(float $quantidade)
 		{
 			$this->valorAtual-=$quantidade; 
 		}

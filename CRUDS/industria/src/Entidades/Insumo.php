@@ -30,8 +30,6 @@ namespace Entidades;
 			return $this->tipo; 
 		}
 
-		
-
 		public function twoJson()
 		{
 			$body = array(); 

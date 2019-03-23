@@ -5,8 +5,7 @@
    das Classe de de negocio. Pacote Entidades. 
  */
 
-   spl_autoload_register(function($nomeClass){
-   	    var_dump($nomeClass); 
+   spl_autoload_register(function($nomeClass){ 
    		$dirClass = "src";
    		$fileName = $dirClass.DIRECTORY_SEPARATOR.$nomeClass.".php"; 
 

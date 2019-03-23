@@ -5,8 +5,10 @@ namespace Dao;
 require_once("EstoqueDao.php");
 require_once("ConexaoDB.php");
 
-#use PDO; 
+use PDO; 
 use Entidades\AProduto; 
+use Entidades\Insumo; 
+use Entidades\Manufaturado; 
 
 class ProdutoDao
 {
@@ -46,10 +48,69 @@ class ProdutoDao
 		}
 	}
 
-	/*public function selectProdutoId(int id)
+	public function selectProdutoDescricao(String $nome)
 	{
+		$stmt = $this->db->prepare("SELECT * from produto WHERE nome= :NOME"); 
 
-	}*/
+	    $stmt->bindParam(":NOME",$nome);
+	    $stmt->execute(); 
+
+	    $result = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+
+	    if ($result) {
+	    	$produto = $this->createProduto($result); 
+	    	return $produto; 
+	    }
+	    return null; 
+	}
+	
+
+    public function selectInsumos($componentes)
+    {
+    	$insumos = array(); 
+
+    	foreach ($componentes as $componente) {
+    		$insumo = $this->selectProdutoDescricao($componente->getDescInsumo()); 
+    		array_push($insumos, $insumo); 
+    	}
+    	return $insumos; 
+
+    }
+
+
+	private function createProdutos($results)
+	{
+		if (count($result)===1){}
+	}
+    
+    private function createProduto($result)
+    {
+    	$row = $result[0];
+
+        $produto_id = (int)$row['produto_id']; 
+    	$nome = $row['nome']; 
+    	$formula_quimica = $row['formula_quimica']; 
+    	$grau_toxico = (int)$row['grau_toxico']; 
+    	$tipo = $row['tipo']; 
+    	
+
+    	if ($tipo === "PI") {
+    		$produto = new Insumo($nome,$formula_quimica,$grau_toxico); 
+    	}else {
+    		$produto = new Manufaturado($nome,$formula_quimica,$grau_toxico); 
+    	}
+
+    	$produto->setCodigo($produto_id);  
+    	$produto->setEstoque($this->estoqueDao->selectEstoqueProduto($produto_id)); 
+        
+    	return $produto; 
+    	
+
+    }
+
+
+
+
 
 
 }
