@@ -1,0 +1,35 @@
+Arquivos php:
+
+.Devem conter apenas as tags <? e <?=
+.Usar somente codificação UTF-8, sem BOM(Byte Order Mark)
+
+Nome de classes e namespace:
+
+.Devem ser declaradas em StudlyCaps.Ex:
+
+<?php
+
+namespace Vendor\Model; 
+
+
+class Foo
+{
+
+}
+
+
+Constantes
+
+
+.Constantes devem ser declaradas em letras maiusculas, utilizando _ quando necessário. 
+
+DATE_APPROVED = '2012-06-01';
+
+
+Nome de Metodos 
+
+.Devem ser declarados em camelCase. Ex:
+
+meuMetodo()
+{
+}

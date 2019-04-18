@@ -1,0 +1,17 @@
+.Visa facilitar o entendimento quando se está lendo código de autores diferentes. 
+.Apresenta uma série de regras sobre como formatar códigos PHP.
+
+
+Regras:
+
+.Códigos em PHP devem seguir o padrão básico de codificação básica (PSR-1).
+.A última linha deve estar em branco.
+.Linhas não deveriam possuir mais de 80 caracteres. 
+.Identação devem ser feitas com 4 espaços ao inves de tabs.
+.Palavras chaves devem ser escritas com letras minusculas (true,false, null).
+.Declarações de use devem ser declaradas após a declaração de um namespace separadas
+ por uma linha em branco. 
+.Todos os métodos devem ter a visibilidade. 
+.Argumentos de métodos podem estar em multiplas linhas. 
+.A palavra elseif deve ser usada no lugar de else if. 
+.Excecões, dar um espaço depois da palavra try
